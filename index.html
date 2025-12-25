@@ -186,6 +186,15 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
+        /* Honeypot hidden field */
+        .honeypot-field {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            height: 0;
+            width: 0;
+        }
+
         #about {
             background: #fff;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -263,6 +272,7 @@
         form {
             max-width: 600px;
             margin: 0 auto;
+            position: relative; /* For honeypot positioning */
         }
 
         input, textarea {
@@ -492,7 +502,7 @@
             <!-- Embedded Google Map -->
             <div class="map-container">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.680927307111!2d7.024000314757!3d4.866000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cf5e5f5f5f5f%3A0xexample!2s28%20Rumuogholu%20Rd%2C%20Port%20Harcourt!5e0!3m2!1sen!2sng!4v1735700000000" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.680927307111!2d6.999!3d4.866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cd0000000000%3A0xexample!2sElgibhor%20School%20International%2C%2028%20Rumuogholu%20Rd%2C%20Port%20Harcourt!5e0!3m2!1sen!2sng!4v1735700000000" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
@@ -502,7 +512,7 @@
                 </iframe>
             </div>
             <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                Search "Elgibhor School International Port Harcourt" on Google Maps for exact directions.
+                Search "Elgibhor School International Port Harcourt" on Google Maps for exact directions and pin.
             </p>
         </div>
     </section>
@@ -580,6 +590,9 @@
             <h2>Contact Us</h2>
             
             <form id="contact-form">
+                <!-- Honeypot field - hidden from humans, filled by bots -->
+                <input type="text" name="_honey" class="honeypot-field" tabindex="-1" autocomplete="off">
+
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -667,7 +680,7 @@
 
         setInterval(() => showSlide(currentSlide + 1), 5000);
 
-        // AJAX Form Submission
+        // AJAX Form Submission with Honeypot Check
         const form = document.getElementById('contact-form');
         const feedback = document.getElementById('form-feedback');
 
@@ -675,6 +688,15 @@
             e.preventDefault();
             feedback.textContent = '';
             feedback.className = '';
+
+            // Client-side honeypot check (extra layer)
+            const honeypot = form.querySelector('input[name="_honeypot"]');
+            if (honeypot.value !== '') {
+                // Bot detected - silently fail or show generic message
+                feedback.textContent = 'Oops! Something went wrong. Please try again later.';
+                feedback.className = 'error-message';
+                return;
+            }
 
             const formData = new FormData(form);
 
