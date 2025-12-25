@@ -149,7 +149,7 @@
             color: #003366;
         }
 
-        /* New Service Times & Location Section */
+        /* Visit Info Section with Map */
         #visit-info {
             background: #fff;
             padding: 3rem 0;
@@ -163,7 +163,7 @@
             padding: 2rem;
             border-radius: 10px;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
         }
 
         #visit-info h3 {
@@ -174,6 +174,16 @@
         #visit-info p {
             font-size: 1.2rem;
             margin-bottom: 1rem;
+        }
+
+        #visit-info .map-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            height: 450px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
         #about {
@@ -422,6 +432,10 @@
             .slide img {
                 height: 300px;
             }
+
+            #visit-info .map-container {
+                height: 300px;
+            }
         }
     </style>
     <!-- Font Awesome for icons -->
@@ -459,7 +473,7 @@
         </div>
     </section>
 
-    <!-- New Section: Service Times & Location -->
+    <!-- Visit Info Section with Google Map -->
     <section id="visit-info">
         <div class="container">
             <div class="info-box">
@@ -467,12 +481,29 @@
                 <p><strong>Sunday Worship Service</strong><br>
                 Every Sunday | 10:00 AM</p>
                 <p><strong>Location</strong><br>
+                Elgibhor School International,<br>
                 28 Rumuogholu Road,<br>
                 Behind Town Hall Rumuogholu,<br>
                 Port Harcourt, Rivers State</p>
                 <p>We can't wait to meet you! Come as you are – everyone is welcome.</p>
                 <a href="#contact" class="btn" style="display: inline-block; margin-top: 1rem;">Let Us Know You're Coming</a>
             </div>
+
+            <!-- Embedded Google Map -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.680927307111!2d7.024000314757!3d4.866000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cf5e5f5f5f5f%3A0xexample!2s28%20Rumuogholu%20Rd%2C%20Port%20Harcourt!5e0!3m2!1sen!2sng!4v1735700000000" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                Search "Elgibhor School International Port Harcourt" on Google Maps for exact directions.
+            </p>
         </div>
     </section>
 
@@ -576,6 +607,7 @@
     <footer>
         <div class="container">
             <p class="footer-address">
+                Meeting at Elgibhor School International,<br>
                 28 Rumuogholu Road, Behind Town Hall Rumuogholu,<br>
                 Port Harcourt, Rivers State, Nigeria
             </p>
