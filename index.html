@@ -690,7 +690,7 @@
             feedback.className = '';
 
             // Client-side honeypot check (extra layer)
-            const honeypot = form.querySelector('input[name="_honeypot"]');
+            const honeypot = form.querySelector('input[name="_honey"]');
             if (honeypot.value !== '') {
                 // Bot detected - silently fail or show generic message
                 feedback.textContent = 'Oops! Something went wrong. Please try again later.';
