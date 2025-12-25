@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christ Fruitful Branch Family (CFBF)</title>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background: linear-gradient(to right, #003366, #004488);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        #hero {
+            background: url('https://assets.seobotai.com/architecturehelper.com/673bf7b50c149f48d61fa9d2-1731984576727.jpg') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 51, 102, 0.7);
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background: #FFD700;
+            color: #003366;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #E5C100;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #003366;
+        }
+
+        #about {
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+
+        #services {
+            background: #f5f5f5;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-item h3 {
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+
+        #events {
+            background: #fff;
+        }
+
+        .event-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .event-item {
+            background: #f5f5f5;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        #donate {
+            background: #f5f5f5;
+        }
+
+        .donate-details {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        #contact {
+            background: linear-gradient(to right, #003366, #004488);
+            color: #fff;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #FFD700;
+            color: #003366;
+            border: none;
+            padding: 0.8rem 2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #E5C100;
+        }
+
+        .contact-buttons {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #25D366;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .contact-btn.call {
+            background: #007BFF;
+        }
+
+        footer {
+            background: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #003366;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            #hero {
+                height: 80vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .slide img {
+                height: 300px;
+            }
+        }
+    </style>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CFBF</div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Christ Fruitful Branch Family</h1>
+            <p>Growing in Faith, Love, and Community</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Christ Fruitful Branch Family (CFBF) is a vibrant community dedicated to spreading the love of Christ. Founded in 2005, we focus on spiritual growth, community service, and family values.</p>
+            <p>Our mission is to bear fruit in every season through worship, teaching, and outreach programs.</p>
+            <div class="slider">
+                <div class="slides" id="slides">
+                    <div class="slide"><img src="https://media.istockphoto.com/id/1456518260/photo/prayer-religious-and-young-man-in-church-with-congregation-faithful-and-hands-together.jpg?s=612x612&w=0&k=20&c=7fMHYJhTZEu9Wgi64UTpn2Gq0f12yzDwZuYOefIUmmI=" alt="Worship 1"></div>
+                    <div class="slide"><img src="https://media.gettyimages.com/id/1708306721/photo/group-of-people-praying-for-mental-support.jpg?s=612x612&w=gi&k=20&c=OlgcCiLWn_BDf-6S1lER-CVO0U8UHiM2qqT3pWe_8ko=" alt="Prayer 2"></div>
+                    <div class="slide"><img src="https://media.istockphoto.com/id/2161124245/photo/christians-raising-their-hands-in-praise-and-worship-at-a-night-music-concert.jpg?s=612x612&w=0&k=20&c=2Lt_xDFW_Wt4V20K_BA2fH43ta9hBbQP_y6NfvBjjI0=" alt="Praise 3"></div>
+                    <div class="slide"><img src="https://altoonachristianchurch.org/wp-content/uploads/2025/10/Outreach-Caring-Hands.jpg" alt="Community Event 1"></div>
+                    <div class="slide"><img src="https://www.datocms-assets.com/60661/1758561699-upcoming_events_header.jpeg" alt="Event 2"></div>
+                </div>
+                <div class="prev" id="prev">&#10094;</div>
+                <div class="next" id="next">&#10095;</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Sunday Worship</h3>
+                    <p>Join us every Sunday at 10 AM for uplifting worship and sermons.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Bible Study</h3>
+                    <p>Wednesdays at 7 PM - Dive deeper into the Word of God.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Youth Programs</h3>
+                    <p>Fridays at 6 PM - Engaging activities for the younger generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="event-list">
+                <div class="event-item">
+                    <h3>Christmas Celebration</h3>
+                    <p>Date: December 25, 2025 | Time: 5 PM</p>
+                </div>
+                <div class="event-item">
+                    <h3>New Year Prayer Night</h3>
+                    <p>Date: December 31, 2025 | Time: 10 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate">
+        <div class="container">
+            <h2>Support Our Ministry - Donate</h2>
+            <div class="donate-details">
+                <p>We appreciate your generous support in advancing God's kingdom.</p>
+                <h3>Bank Transfer Details</h3>
+                <p><strong>Bank:</strong> Access Bank</p>
+                <p><strong>Account Name:</strong> Christ Fruitful Branch Family</p>
+                <p><strong>Account Number:</strong> 0123456789</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="https://formspark.io/api/form/TqThjaW5u" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-buttons">
+                <a href="https://wa.me/2349068427526" class="contact-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <a href="tel:+2349068427526" class="contact-btn call">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Christ Fruitful Branch Family. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Slider Functionality
+        const slides = document.getElementById('slides');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let currentSlide = 0;
+        const slideCount = slides.children.length;
+
+        function showSlide(index) {
+            if (index >= slideCount) index = 0;
+            if (index < 0) index = slideCount - 1;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            currentSlide = index;
+        }
+
+        prev.addEventListener('click', () => showSlide(currentSlide - 1));
+        next.addEventListener('click', () => showSlide(currentSlide + 1));
+
+        // Auto-slide every 5 seconds
+        setInterval(() => showSlide(currentSlide + 1), 5000);
+    </script>
+</body>
+</html>
