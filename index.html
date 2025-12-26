@@ -658,7 +658,7 @@
             <h2>Contact Us</h2>
             
             <form id="contact-form">
-                <input type="text" name="_honeypot" class="honeypot-field" tabindex="-1" autocomplete="off">
+                <input type="text" name="_honey" class="honeypot-field" tabindex="-1" autocomplete="off">
 
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
@@ -756,7 +756,7 @@
             feedback.textContent = '';
             feedback.className = '';
 
-            const honeypot = form.querySelector('input[name="_honeypot"]');
+            const honeypot = form.querySelector('input[name="_honey"]');
             if (honeypot.value !== '') {
                 feedback.textContent = 'Oops! Something went wrong. Please try again later.';
                 feedback.className = 'error-message';
