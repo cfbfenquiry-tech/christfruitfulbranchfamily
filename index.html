@@ -53,7 +53,7 @@
         }
 
         .logo img {
-            height: 50px; /* Size for header logo */
+            height: 50px;
             width: auto;
             margin-right: 10px;
         }
@@ -533,7 +533,7 @@
         </div>
     </header>
 
-    <!-- The rest of your site code remains exactly the same -->
+    <!-- The rest of the site (unchanged) -->
     <section id="hero">
         <div class="hero-content">
             <h1>Welcome to Christ Fruitful Branch Family</h1>
@@ -731,6 +731,13 @@
             navLinks.classList.toggle('active');
         });
 
+        // Auto-close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -805,4 +812,4 @@
         });
     </script>
 </body>
-</html>
+    </html>
