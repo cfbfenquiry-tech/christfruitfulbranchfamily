@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christ Fruitful Branch Family (CFBF)</title>
+    
+    <!-- Favicon using your logo (upload as favicon.png) -->
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
+    
     <style>
         /* CSS Styles */
         * {
@@ -47,16 +53,9 @@
         }
 
         .logo img {
-            height: 50px; /* Adjust size as needed */
+            height: 50px; /* Size for header logo */
             width: auto;
             margin-right: 10px;
-        }
-
-        .logo span {
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         nav {
@@ -512,9 +511,8 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="images/logo3.png" alt="CFBF Logo">
-                    <!-- If you prefer text next to logo, uncomment below -->
-                    <!-- <span>CFBF</span> -->
+                    <!-- Header logo (upload as logo.png) -->
+                    <img src="logo3.png" alt="CFBF Logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
@@ -535,7 +533,7 @@
         </div>
     </header>
 
-    <!-- Rest of the code remains the same as previous version -->
+    <!-- The rest of your site code remains exactly the same -->
     <section id="hero">
         <div class="hero-content">
             <h1>Welcome to Christ Fruitful Branch Family</h1>
@@ -673,7 +671,7 @@
             <h2>Contact Us</h2>
             
             <form id="contact-form">
-                <input type="text" name="_honeypot" class="honeypot-field" tabindex="-1" autocomplete="off">
+                <input type="text" name="_honey" class="honeypot-field" tabindex="-1" autocomplete="off">
 
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
@@ -771,7 +769,7 @@
             feedback.textContent = '';
             feedback.className = '';
 
-            const honeypot = form.querySelector('input[name="_honeypot"]');
+            const honeypot = form.querySelector('input[name="_honey"]');
             if (honeypot.value !== '') {
                 feedback.textContent = 'Oops! Something went wrong. Please try again later.';
                 feedback.className = 'error-message';
