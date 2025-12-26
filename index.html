@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +42,17 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; /* Adjust size as needed */
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .logo span {
             font-size: 1.8rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -487,6 +497,10 @@
             #visit-info .map-container {
                 height: 300px;
             }
+
+            .logo img {
+                height: 40px;
+            }
         }
     </style>
     <!-- Font Awesome for icons -->
@@ -497,7 +511,11 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">CFBF</div>
+                <div class="logo">
+                    <img src="images/image.jpg" alt="CFBF Logo">
+                    <!-- If you prefer text next to logo, uncomment below -->
+                    <!-- <span>CFBF</span> -->
+                </div>
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#visit-info">Visit Us</a></li>
@@ -517,6 +535,7 @@
         </div>
     </header>
 
+    <!-- Rest of the code remains the same as previous version -->
     <section id="hero">
         <div class="hero-content">
             <h1>Welcome to Christ Fruitful Branch Family</h1>
@@ -525,7 +544,6 @@
         </div>
     </section>
 
-    <!-- Visit Info Section with Google Map -->
     <section id="visit-info">
         <div class="container">
             <div class="info-box">
@@ -541,7 +559,6 @@
                 <a href="#contact" class="btn" style="display: inline-block; margin-top: 1rem;">Let Us Know You're Coming</a>
             </div>
 
-            <!-- Embedded Google Map using Plus Code -->
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3976.8!2d7.024!3d4.866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!1sVXFQ%2BP8P%20Port%20Harcourt!5e0!3m2!1sen!2sng!4v1735700000000" 
@@ -578,7 +595,6 @@
         </div>
     </section>
 
-    <!-- Our Values Section -->
     <section id="values">
         <div class="container">
             <h2>Our Core Values: Spirit, Light & Truth</h2>
@@ -599,7 +615,6 @@
         </div>
     </section>
 
-    <!-- Services Section with Separate Youth & Children -->
     <section id="services">
         <div class="container">
             <h2>Our Services & Programs</h2>
@@ -658,7 +673,7 @@
             <h2>Contact Us</h2>
             
             <form id="contact-form">
-                <input type="text" name="_honey" class="honeypot-field" tabindex="-1" autocomplete="off">
+                <input type="text" name="_honeypot" class="honeypot-field" tabindex="-1" autocomplete="off">
 
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
@@ -756,7 +771,7 @@
             feedback.textContent = '';
             feedback.className = '';
 
-            const honeypot = form.querySelector('input[name="_honey"]');
+            const honeypot = form.querySelector('input[name="_honeypot"]');
             if (honeypot.value !== '') {
                 feedback.textContent = 'Oops! Something went wrong. Please try again later.';
                 feedback.className = 'error-message';
@@ -792,4 +807,4 @@
         });
     </script>
 </body>
-                        </html>
+</html>
