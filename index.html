@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -186,6 +187,74 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
+        /* Services Section */
+        #services {
+            background: #f5f5f5;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-item h3 {
+            color: #003366;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .service-item p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Values Section */
+        #values {
+            background: #fff;
+            padding: 5rem 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .value-item {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .value-item h3 {
+            color: #003366;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-item p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
         /* Honeypot hidden field */
         .honeypot-field {
             position: absolute;
@@ -204,34 +273,6 @@
             max-width: 800px;
             margin: 0 auto 2rem;
             text-align: center;
-        }
-
-        #services {
-            background: #f5f5f5;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-item {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .service-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-item h3 {
-            color: #003366;
-            margin-bottom: 1rem;
         }
 
         #events {
@@ -272,7 +313,7 @@
         form {
             max-width: 600px;
             margin: 0 auto;
-            position: relative; /* For honeypot positioning */
+            position: relative;
         }
 
         input, textarea {
@@ -461,6 +502,7 @@
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#visit-info">Visit Us</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#values">Our Values</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#events">Events</a></li>
                     <li><a href="#donate">Donate</a></li>
@@ -491,18 +533,18 @@
                 <p><strong>Sunday Worship Service</strong><br>
                 Every Sunday | 10:00 AM</p>
                 <p><strong>Location</strong><br>
-                Elgibhor School International,<br>
-                28 Rumuogholu Road,<br>
-                Behind Town Hall Rumuogholu,<br>
-                Port Harcourt, Rivers State</p>
+                Elgibhor School International<br>
+                Rumuaghaolu Road,<br>
+                Rumo Aholu,<br>
+                Port Harcourt 500272, Rivers State</p>
                 <p>We can't wait to meet you! Come as you are – everyone is welcome.</p>
                 <a href="#contact" class="btn" style="display: inline-block; margin-top: 1rem;">Let Us Know You're Coming</a>
             </div>
 
-            <!-- Embedded Google Map -->
+            <!-- Embedded Google Map using Plus Code -->
             <div class="map-container">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.680927307111!2d6.999!3d4.866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cd0000000000%3A0xexample!2sElgibhor%20School%20International%2C%2028%20Rumuogholu%20Rd%2C%20Port%20Harcourt!5e0!3m2!1sen!2sng!4v1735700000000" 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3976.8!2d7.024!3d4.866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!1sVXFQ%2BP8P%20Port%20Harcourt!5e0!3m2!1sen!2sng!4v1735700000000" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
@@ -512,7 +554,7 @@
                 </iframe>
             </div>
             <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                Search "Elgibhor School International Port Harcourt" on Google Maps for exact directions and pin.
+                Search "VXFQ+P8P" or "Elgibhor School International Rumuaghaolu Road Port Harcourt" on Google Maps for exact directions.
             </p>
         </div>
     </section>
@@ -536,21 +578,47 @@
         </div>
     </section>
 
+    <!-- Our Values Section -->
+    <section id="values">
+        <div class="container">
+            <h2>Our Core Values: Spirit, Light & Truth</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h3>Spirit</h3>
+                    <p>We are led by the Holy Spirit in everything we do. We pursue His presence, power, and gifts, believing that true transformation and fruitfulness come only through a life surrendered to and empowered by the Spirit of God.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Light</h3>
+                    <p>We are called to be bearers of God's light in a dark world. Through authentic love, compassionate service, and bold witness, we shine Christ's hope, joy, and righteousness into our community and beyond.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Truth</h3>
+                    <p>We stand firmly on the unchanging Truth of God's Word. The Bible is our foundation for faith, teaching, and living. We seek to know, obey, and proclaim the Truth that sets people free and brings lasting fruit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Separate Youth & Children -->
     <section id="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2>Our Services & Programs</h2>
             <div class="service-grid">
                 <div class="service-item">
                     <h3>Sunday Worship</h3>
-                    <p>Join us every Sunday at 10 AM for uplifting worship and practical Bible teaching.</p>
+                    <p>Step into a powerful encounter with the living God! Our Sunday worship is a Spirit-filled celebration where hearts are ignited, lives are transformed, and faith is strengthened. Expect anointed praise, deep worship, and practical, Truth-centered teaching that equips you to live fruitfully in every area of life. Come hungry for more of Jesus—He is waiting to meet you here. Every Sunday at 10:00 AM.</p>
                 </div>
                 <div class="service-item">
                     <h3>Bible Study</h3>
-                    <p>Coming soon – Deep dive into God's Word together.</p>
+                    <p>Journey deeper into the Truth that sets you free! Our Bible Study is a dynamic, Spirit-led gathering where we unpack God's Word together—verse by verse, revelation by revelation. You'll grow in understanding, sharpen your faith, and experience the Light of Scripture illuminating every part of your life. Perfect for those who desire to know God more intimately. Launching soon!</p>
                 </div>
                 <div class="service-item">
-                    <h3>Youth & Children</h3>
-                    <p>Engaging programs for the next generation – launching soon!</p>
+                    <h3>Children's Ministry (Little Lights)</h3>
+                    <p>We believe the youngest hearts can shine the brightest for Jesus! Little Lights is a joyful, safe, and Spirit-filled environment where children discover God's love, learn biblical Truth through fun stories, songs, crafts, and games, and grow in faith. Our dedicated team nurtures each child to walk in the Light from an early age, planting seeds that will bear eternal fruit. Launching soon!</p>
+                </div>
+                <div class="service-item">
+                    <h3>Youth Ministry (Ignite Youth)</h3>
+                    <p>This generation is called to burn brightly for Christ! Ignite Youth is a vibrant, Spirit-empowered community where young people encounter God powerfully, stand boldly on His Truth, and shine as lights in their schools, homes, and streets. Through dynamic worship, relevant teaching, real talk, and authentic relationships, we raise world-changers who live fully surrendered to the Holy Spirit. Launching soon!</p>
                 </div>
             </div>
         </div>
@@ -590,8 +658,7 @@
             <h2>Contact Us</h2>
             
             <form id="contact-form">
-                <!-- Honeypot field - hidden from humans, filled by bots -->
-                <input type="text" name="_honey" class="honeypot-field" tabindex="-1" autocomplete="off">
+                <input type="text" name="_honeypot" class="honeypot-field" tabindex="-1" autocomplete="off">
 
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
@@ -620,9 +687,9 @@
     <footer>
         <div class="container">
             <p class="footer-address">
-                Meeting at Elgibhor School International,<br>
-                28 Rumuogholu Road, Behind Town Hall Rumuogholu,<br>
-                Port Harcourt, Rivers State, Nigeria
+                Meeting at Elgibhor School International<br>
+                Rumuaghaolu Road, Rumo Aholu,<br>
+                Port Harcourt 500272, Rivers State, Nigeria
             </p>
             <p>&copy; 2025 Christ Fruitful Branch Family. All Rights Reserved.</p>
             <div class="social-links">
@@ -689,10 +756,8 @@
             feedback.textContent = '';
             feedback.className = '';
 
-            // Client-side honeypot check (extra layer)
-            const honeypot = form.querySelector('input[name="_honey"]');
+            const honeypot = form.querySelector('input[name="_honeypot"]');
             if (honeypot.value !== '') {
-                // Bot detected - silently fail or show generic message
                 feedback.textContent = 'Oops! Something went wrong. Please try again later.';
                 feedback.className = 'error-message';
                 return;
@@ -727,4 +792,4 @@
         });
     </script>
 </body>
-</html>
+                        </html>
