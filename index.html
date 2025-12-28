@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Christ Fruitful Branch Family (CFBF) is a vibrant church in Port Harcourt, Nigeria. Join us every Sunday for Spirit-filled worship, truth-centered teaching, and loving community.">
+    <meta name="keywords" content="Church in Port Harcourt, Christ Fruitful Branch Family, CFBF Church, Christian church Rivers State">
+    
     <title>Christ Fruitful Branch Family (CFBF)</title>
     
     <!-- Favicon using your logo (upload as favicon.png) -->
@@ -10,6 +15,18 @@
     <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
     <link rel="apple-touch-icon" href="images/favicon.png" sizes="180x180">
     
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBBML1G3PZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QBBML1G3PZ');
+    </script>
+
     <style>
         /* CSS Styles */
         * {
@@ -502,8 +519,6 @@
             }
         }
     </style>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -511,7 +526,6 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <!-- Header logo (upload as logo.png) -->
                     <img src="images/logo3.png" alt="CFBF Logo">
                 </div>
                 <ul class="nav-links">
@@ -533,7 +547,6 @@
         </div>
     </header>
 
-    <!-- The rest of the site (unchanged) -->
     <section id="hero">
         <div class="hero-content">
             <h1>Welcome to Christ Fruitful Branch Family</h1>
@@ -669,6 +682,7 @@
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
+            <p>Email us at: info@christfruitfulbranch.org.ng</p>
             
             <form id="contact-form">
                 <input type="text" name="_honey" class="honeypot-field" tabindex="-1" autocomplete="off">
@@ -704,6 +718,7 @@
                 Rumuaghaolu Road, Rumo Aholu,<br>
                 Port Harcourt 500272, Rivers State, Nigeria
             </p>
+            <p>Email: info@christfruitfulbranch.org.ng</p>
             <p>&copy; 2025 Christ Fruitful Branch Family. All Rights Reserved.</p>
             <div class="social-links">
                 <a href="https://facebook.com/CfbfOfficial" target="_blank" title="Facebook">
@@ -786,7 +801,7 @@
             const formData = new FormData(form);
 
             try {
-                const response = await fetch('https://formsubmit.co/ajax/cfbfenquiry@gmail.com', {
+                const response = await fetch('https://formsubmit.co/ajax/info@christfruitfulbranch.org.ng', {
                     method: 'POST',
                     body: formData
                 });
@@ -812,4 +827,4 @@
         });
     </script>
 </body>
-    </html>
+                    </html>
